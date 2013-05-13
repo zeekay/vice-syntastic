@@ -18,3 +18,8 @@ let g:syntastic_javascript_jshint_conf = s:path.'/jshint.json'
 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_checker_args = '--ignore=E221,E225,E231,E251,E302,E303,W391,E501,E702'
+
+let g:syntastic_error_symbol = '› '
+let g:syntastic_warning_symbol = '› '
+let g:syntastic_style_error_symbol = '› '
+let g:syntastic_style_warning_symbol = '› '
