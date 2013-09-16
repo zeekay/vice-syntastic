@@ -15,7 +15,7 @@ let g:syntastic_coffee_coffeelint_post_args = '--file '.g:vice.addon_dir.'/coffe
 let g:syntastic_javascript_jshint_conf = g:vice.addon_dir.'/jshint.json'
 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_checker_args = '--ignore=E221,E225,E231,E251,E302,E303,W391,E501,E702'
+let g:syntastic_python_flake8_args = '--ignore=E127,E221,E223,E224,E225,E231,E241,E251,E302,E303,W391,E501,E702'
 
 let g:syntastic_error_symbol = '› '
 let g:syntastic_warning_symbol = '› '
