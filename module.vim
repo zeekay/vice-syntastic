@@ -9,7 +9,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_enable_signs = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_stl_format = '⚡︎ line %F, 1 of %t ⚡︎'
 
 let g:syntastic_csslint_options = '--ignore=ids'
