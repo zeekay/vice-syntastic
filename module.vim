@@ -39,3 +39,4 @@ augroup vice_syntastic
 augroup END
 
 command! Pylint SyntasticCheck pylint
+command! Jslint SyntasticCheck jslint
