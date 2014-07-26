@@ -1,29 +1,34 @@
 {
-    // enforce
-    "curly": false,
-    "forin": false,
+   // enforce
+  "strict":       true,
+  "curly":        false,
+  "forin":        false,
+  "latedef":      true,
+  "undef":        true,
+  "unused":       true,
+  "strict":       true,
+  "quotmark":     true,
+  "immed":        true,
+  "camelcase":    true,
+  "nonew":        true,
 
-    // relax
-    "asi": true,
-    "boss": true,
-    "eqnull": true,
-    "es5": true,
-    "esnext": true,
-    "evil": true,
-    "laxcomma": true,
-    "loopfunc": true,
-    "globalstrict": true,
-    "strict": false,
+  //              relax
+  "asi":          true,
+  "boss":         true,
+  "eqnull":       true,
+  "esnext":       true,
+  "laxcomma":     true,
+  "loopfunc":     true,
+  "globalstrict": true,
+  "strict":       false,
 
-    // globals
-    "browser": true,
-    "devel": true,
-    "node": true,
-
-    "predef": [
-        "DEBUG",
-        "TEST",
-        "define",
-        "require"
-    ]
+  //              globals
+  "browser":      true,
+  "browserify":   true,
+  "devel":        true,
+  "jquery":       true,
+  "node":         true,
+  "nonstandard":  true,
+  "phantom":      true,
+  "worker":       true
 }
