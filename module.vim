@@ -1,9 +1,24 @@
 call vice#Extend({
     \ 'addons': [
-        \ 'github:scrooloose/syntastic',
         \ 'github:zeekay/QuickFixCurrentNumber',
     \ ]
 \ })
+
+func! s:enable_syntastic()
+    " Disable autocommand to enable syntastic
+    augroup vice_syntastic
+        au!
+    augroup END
+
+    call vice#ForceActivateAddon('github:scrooloose/syntastic')
+    SyntasticCheck
+endf
+
+" Autocommand group to enable syntastic
+augroup vice_syntastic
+    au!
+    au BufWritePost * call s:enable_syntastic()
+augroup END
 
 let g:syntastic_aggregate_errors            = 1
 let g:syntastic_auto_loc_list               = 0
@@ -24,7 +39,9 @@ let g:syntastic_csslint_options             = '--ignore = ids'
 let g:syntastic_coffee_coffeelint_post_args = '--file '.g:vice.addon_dir.'/coffeelint.json'
 
 " JavaScript
+let g:syntastic_javascript_checkers         = ['jshint']
 let g:syntastic_javascript_jshint_args      = '--config '.g:vice.addon_dir.'/jshint.json'
+let g:syntastic_javascript_jslint_args      = '--browser --node --vars --plusplus'
 
 " Python
 let g:syntastic_python_checkers             = ['flake8']
