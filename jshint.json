@@ -1,16 +1,14 @@
 {
    // enforce
-  "strict":       true,
+  "camelcase":    true,
   "curly":        false,
   "forin":        false,
+  "immed":        true,
   "latedef":      true,
+  "nonew":        true,
+  "quotmark":     true,
   "undef":        true,
   "unused":       true,
-  "strict":       true,
-  "quotmark":     true,
-  "immed":        true,
-  "camelcase":    true,
-  "nonew":        true,
 
   //              relax
   "asi":          true,
@@ -18,9 +16,6 @@
   "eqnull":       true,
   "esnext":       true,
   "laxcomma":     true,
-  "loopfunc":     true,
-  "globalstrict": true,
-  "strict":       false,
 
   //              globals
   "browser":      true,
