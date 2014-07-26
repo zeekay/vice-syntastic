@@ -38,5 +38,5 @@ augroup vice_syntastic
     au BufWritePost * call vice#syntastic#enable()
 augroup END
 
-command! Pylint SyntasticCheck pylint
-command! Jslint SyntasticCheck jslint
+au filetype python     command! -buffer Pylint SyntasticCheck pylint
+au filetype javascript command! -buffer Jslint SyntasticCheck jslint
