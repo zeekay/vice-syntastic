@@ -1,5 +1,8 @@
 func! vice#syntastic#check()
     SyntasticCheck
+    if exists('g:vice_syntastic_hook')
+        exe 'call '.g:vice_syntastic_hook.'()'
+    endif
 endf
 
 " Disable autocommand to enable syntastic and do check
