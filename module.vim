@@ -11,7 +11,7 @@ let g:syntastic_auto_loc_list               = 0
 let g:syntastic_check_on_open               = 0
 let g:syntastic_check_on_wq                 = 0
 let g:syntastic_enable_highlighting         = 0
-let g:syntastic_stl_format                  = '⚡ line %F, 1 of %t'
+let g:syntastic_stl_format                  = 'line %F, 1 of %t'
 let g:syntastic_enable_signs                = 1
 let g:syntastic_error_symbol                = '!'
 let g:syntastic_style_error_symbol          = '>'
@@ -29,6 +29,10 @@ let g:syntastic_coffee_coffeelint_post_args = '--file '.g:vice.addon_dir.'/coffe
 let g:syntastic_javascript_checkers         = ['jshint']
 let g:syntastic_javascript_jshint_args      = '--config '.g:vice.addon_dir.'/jshint.json'
 let g:syntastic_javascript_jslint_args      = '--browser --node --vars --plusplus'
+
+" Haskell
+let g:syntastic_haskell_checkers            = ['ghc_mod', 'hlint']
+let g:syntastic_haskell_ghc_mod_args        = ''
 
 " Python
 let g:syntastic_python_checkers             = ['flake8']
