@@ -31,8 +31,9 @@ let g:syntastic_javascript_jshint_args      = '--config '.g:vice.addon_dir.'/jsh
 let g:syntastic_javascript_jslint_args      = '--browser --node --vars --plusplus'
 
 " Haskell
-let g:syntastic_haskell_checkers            = ['ghc_mod', 'hlint']
-let g:syntastic_haskell_ghc_mod_args        = ''
+if exists('g:vice.neocompletion.enable_necoghc') && eval('vice.neocompletion.enable_necoghc')
+    let g:syntastic_haskell_checkers = []
+endif
 
 " Python
 let g:syntastic_python_checkers             = ['flake8']
