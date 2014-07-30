@@ -4,6 +4,10 @@ call vice#Extend({
     \ ]
 \ })
 
+if !exists('g:vice.syntastic.hooks')
+    let g:vice.syntastic = {'hooks': []}
+endif
+
 call vice#CreateCommand('SyntasticCheck', ['github:scrooloose/syntastic'])
 
 let g:syntastic_aggregate_errors            = 1
