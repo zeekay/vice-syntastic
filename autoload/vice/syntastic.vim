@@ -1,4 +1,5 @@
 func! vice#syntastic#check()
+    SyntasticReset
     SyntasticCheck
     for hook in g:vice.syntastic.hooks
         exe 'call '.hook.'()'
