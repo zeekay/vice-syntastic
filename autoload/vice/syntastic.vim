@@ -4,6 +4,7 @@ func! vice#syntastic#check()
     for hook in g:vice.syntastic.hooks
         exe 'call '.hook.'()'
     endfor
+    redraw!
 endf
 
 " Disable autocommand to enable syntastic and do check
