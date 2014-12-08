@@ -40,6 +40,9 @@ let g:syntastic_python_checkers             = ['flake8']
 let g:syntastic_python_flake8_args          = '--ignore=E127,E221,E223,E224,E225,E226,E231,E241,E251,E271,E272,E302,E303,W391,E501,E702,E711'
 let g:syntastic_python_pylint_args          = '-d C0103,C0111,C0301,C0326,W0403,R0903'
 
+" Go
+let g:go_fmt_fail_silently = 1
+
 augroup vice_syntastic
     au!
     au BufWritePost * call vice#syntastic#enable()
