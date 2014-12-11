@@ -10,6 +10,7 @@ endif
 
 call vice#CreateCommand('SyntasticCheck', ['github:scrooloose/syntastic'])
 
+" let g:syntastic_mode_map                    = {"mode": "passive"}
 let g:syntastic_always_populate_loc_list    = 1
 let g:syntastic_aggregate_errors            = 1
 let g:syntastic_auto_loc_list               = 1
@@ -42,10 +43,12 @@ let g:syntastic_python_pylint_args          = '-d C0103,C0111,C0301,C0326,W0403,
 
 " Go
 let g:go_fmt_fail_silently = 1
+let g:gofmt_command = "goimports"
 
 augroup vice_syntastic
     au!
-    au BufWritePost * call vice#syntastic#enable()
+    au BufWrite * call vice#syntastic#enable()
+    au QuitPre * call vice#syntastic#quit_hook()
 augroup END
 
 au filetype python     command! -buffer Pylint SyntasticCheck pylint
