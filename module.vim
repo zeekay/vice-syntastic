@@ -48,7 +48,10 @@ let g:gofmt_command = "goimports"
 augroup vice_syntastic
     au!
     au BufWrite * call vice#syntastic#enable()
-    au QuitPre * call vice#syntastic#quit_hook()
+
+    if v:version > 703 || (v:version == 703 && has('patch544'))
+        au QuitPre * call vice#syntastic#quit_hook()
+    endif
 augroup END
 
 au filetype python     command! -buffer Pylint SyntasticCheck pylint
