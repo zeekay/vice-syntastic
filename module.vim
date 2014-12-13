@@ -43,7 +43,7 @@ let g:syntastic_python_pylint_args          = '-d C0103,C0111,C0301,C0326,W0403,
 
 " Go
 let g:go_fmt_fail_silently = 1
-let g:gofmt_command = "goimports"
+let g:go_fmt_command       = "goimports"
 
 augroup vice_syntastic
     au!
