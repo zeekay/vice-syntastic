@@ -28,6 +28,16 @@ let g:syntastic_warning_symbol              = '.'
 " CSS
 let g:syntastic_csslint_options             = '--ignore = ids'
 
+" HTML
+let g:syntastic_html_tidy_ignore_errors = [
+    \ '<html> proprietary attribute "xmlns:ng"',
+    \ 'proprietary attribute "ng-',
+    \ 'proprietary attribute "xt-',
+    \ '<meta> proprietary attribute "property"',
+    \ '<img> lacks "alt" attribute',
+    \ '<img> lacks "src" attribute',
+\ ]
+
 " CoffeeScript
 let g:syntastic_coffee_coffeelint_post_args = '--file '.g:vice.addon_dir.'/coffeelint.json'
 
