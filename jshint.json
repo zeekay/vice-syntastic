@@ -1,28 +1,23 @@
 {
-   // enforce
-  "camelcase":    true,
-  "curly":        false,
-  "forin":        false,
-  "immed":        true,
-  "latedef":      true,
-  "nonew":        true,
-  "quotmark":     true,
-  "undef":        true,
-  "unused":       true,
-
-  //              relax
   "asi":          true,
   "boss":         true,
+  "browser":      true,
+  "camelcase":    true,
+  "curly":        false,
+  "devel":        true,
   "eqnull":       true,
   "esnext":       true,
-  "laxcomma":     true,
-
-  //              globals
-  "browser":      true,
-  "devel":        true,
+  "forin":        false,
+  "immed":        true,
   "jquery":       true,
+  "latedef":      true,
+  "laxcomma":     true,
   "node":         true,
+  "nonew":        true,
   "nonstandard":  true,
   "phantom":      true,
+  "quotmark":     true,
+  "undef":        true,
+  "unused":       "vars",
   "worker":       true
 }
