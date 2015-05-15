@@ -37,6 +37,8 @@ let g:syntastic_html_tidy_ignore_errors = [
     \ '<img> lacks "alt" attribute',
     \ '<img> lacks "src" attribute',
     \ 'trimming empty',
+    \ 'is not recognized!',
+    \ 'discarding unexpected',
 \ ]
 
 " CoffeeScript
