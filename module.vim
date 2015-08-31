@@ -30,7 +30,7 @@ let g:syntastic_csslint_options             = '--ignore = ids'
 
 " HTML
 let g:syntastic_html_tidy_ignore_errors = [
-    \ "isn't allowd in",
+    \ "isn't allowed in",
     \ '<html> proprietary attribute "xmlns:ng"',
     \ 'proprietary attribute "ng-',
     \ 'proprietary attribute "xt-',
