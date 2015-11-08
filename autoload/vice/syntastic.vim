@@ -29,7 +29,7 @@ func! vice#syntastic#enable()
 endf
 
 func! vice#syntastic#find_jshintrc()
-    let jshintrc = findfile('.jshintrc')
+    let jshintrc = findfile('.jshintrc', '.;')
     if jshintrc == ""
         let g:syntastic_javascript_jshint_args = g:vice.syntastic.jshint_args
     else
