@@ -46,9 +46,9 @@ let g:syntastic_html_tidy_ignore_errors = [
 let g:syntastic_coffee_coffeelint_post_args = '--file '.g:vice.addon_dir.'/coffeelint.json'
 
 " JavaScript
-let g:syntastic_javascript_checkers         = ['jshint']
-let g:syntastic_javascript_jshint_args      = '--config '.g:vice.addon_dir.'/jshint.json'
-let g:syntastic_javascript_jslint_args      = '--browser --node --vars --plusplus'
+let g:syntastic_javascript_checkers    = ['jshint']
+let g:syntastic_javascript_jslint_args = '--browser --node --vars --plusplus'
+let g:vice.syntastic.jshint_args       = '--config '.g:vice.addon_dir.'/jshint.json'
 
 " Python
 let g:syntastic_python_checkers             = ['flake8']
@@ -73,3 +73,6 @@ au filetype javascript command! -buffer Jslint SyntasticCheck jslint
 
 " Prevent Syntastic from popping up on wq and blocking exit
 au WinEnter * if &buftype ==# 'quickfix' && winnr('$') == 1 | quit | endif
+
+" Use local jshintrc if available.
+au BufEnter * call vice#syntastic#find_jshintrc()
