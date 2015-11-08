@@ -30,16 +30,14 @@ let g:syntastic_csslint_options             = '--ignore = ids'
 
 " HTML
 let g:syntastic_html_tidy_ignore_errors = [
+    \ "escaping malformed URI reference",
     \ "isn't allowed in",
-    \ '<html> proprietary attribute "xmlns:ng"',
-    \ 'proprietary attribute "ng-',
-    \ 'proprietary attribute "xt-',
-    \ '<meta> proprietary attribute "property"',
+    \ "proprietary attribute",
     \ '<img> lacks "alt" attribute',
     \ '<img> lacks "src" attribute',
-    \ 'trimming empty',
-    \ 'is not recognized!',
     \ 'discarding unexpected',
+    \ 'is not recognized!',
+    \ 'trimming empty',
 \ ]
 
 " CoffeeScript
