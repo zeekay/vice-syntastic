@@ -6,7 +6,7 @@
   "curly":        false,
   "devel":        true,
   "eqnull":       true,
-  "esnext":       true,
+  "esversion":    6,
   "forin":        false,
   "immed":        true,
   "jquery":       true,
